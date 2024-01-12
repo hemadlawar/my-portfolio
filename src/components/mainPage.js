@@ -1,7 +1,7 @@
 import React from "react";
 import { NavbarSimple } from "./navList";
 
-export default function MainPage() {
+export function MainPage() {
   return (
     <div>
       <NavbarSimple />
