@@ -58,14 +58,10 @@ export const NavbarSimple = () => {
         >
           Material Tailwind
         </Typography>
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
-        {/* Render IconButton based on screen size */}
-        {window.innerWidth < 960 ? (
+        <div className="lg:hidden">
           <IconButton
             variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
           >
@@ -75,10 +71,15 @@ export const NavbarSimple = () => {
               <Bars3Icon className="h-6 w-6" strokeWidth={2} />
             )}
           </IconButton>
-        ) : null}
+        </div>
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
       </div>
       <Collapse open={openNav}>
-        <NavList />
+        <div className="lg:hidden">
+          <NavList />
+        </div>
       </Collapse>
     </Navbar>
   );
