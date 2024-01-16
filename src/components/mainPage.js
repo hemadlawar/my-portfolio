@@ -1,10 +1,9 @@
 import React from "react";
-import { NavbarSimple } from "./navList";
-
+import NavList from "./navList";
 export function MainPage() {
   return (
     <div>
-      <NavbarSimple />
+      <NavList />
     </div>
   );
 }

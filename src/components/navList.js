@@ -1,86 +1,126 @@
-import React, { useState, useEffect } from "react";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
+import React from "react";
+import { useState } from "react";
 
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const NavItem = ({ href, children }) => (
-  <Typography
-    as="li"
-    variant="small"
-    color="blue-gray"
-    className="p-1 font-medium"
-  >
-    <a
-      href={href}
-      className="flex items-center hover:text-blue-500 transition-colors"
-    >
-      {children}
-    </a>
-  </Typography>
-);
-
-const NavList = () => (
-  <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-    <NavItem href="#">Pages</NavItem>
-    <NavItem href="#">Account</NavItem>
-    <NavItem href="#">Blocks</NavItem>
-    <NavItem href="#">Docs</NavItem>
-  </ul>
-);
-
-export const NavbarSimple = () => {
-  const [openNav, setOpenNav] = useState(false);
-
-  const handleWindowResize = () =>
-    window.innerWidth >= 960 && setOpenNav(false);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
+export default function NavList() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          Material Tailwind
-        </Typography>
-        <div className="lg:hidden">
-          <IconButton
-            variant="text"
-            className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
+    <>
+      <nav className="bg-gray-400">
+        <div className="flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
+          <div className="flex-shrink-0 font-bold tracking-wider">LOGO</div>
+          <button
+            type="button"
+            className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
-            {openNav ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-            ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-            )}
-          </IconButton>
+            <svg
+              className="h-6 w-6"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div className="hidden lg:block">
-          <NavList />
+      </nav>
+      {showMobileMenu && (
+        <div className="px-2 md:px-0 py-3 space-y-2 md:space-y-0 md:space-x-2 font-medium text-slate-700">
+          <a
+            href="#"
+            className="block md:inline-block px-3 py-2 rounded-md text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700"
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+          >
+            Features
+          </a>
+          <a
+            href="#"
+            className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+          >
+            Pricing
+          </a>
+          <a
+            href="#"
+            className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+          >
+            Contact
+          </a>
         </div>
-      </div>
-      <Collapse open={openNav}>
-        <div className="lg:hidden">
-          <NavList />
-        </div>
-      </Collapse>
-    </Navbar>
+      )}
+    </>
   );
-};
+}
+/**
+ * 
+ * 
+ * 
+ * <nav className="bg-gray-400">
+      <div className="flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
+        <div className="flex-shrink-0 font-bold tracking-wider">
+          LOGO
+        </div>
+        <button
+          type="button"
+          className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+          onClick={() => setShowMobileMenu(!showMobileMenu)}>
+          <svg
+            className="h-6 w-6"
+            stroke="currentColor"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      {showMobileMenu && <Menu />}
+    </nav>
+    -------
+
+
+
+
+     <div>
+      <div className="px-2 py-3 space-y-2 font-medium text-slate-700">
+        <a
+          href="#"
+          className="block px-3 py-2 rounded-md text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700"
+        >
+          Home
+        </a>
+        <a
+          href="#"
+          className="block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+        >
+          Features
+        </a>
+        <a
+          href="#"
+          className="block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+        >
+          Pricing
+        </a>
+        <a
+          href="#"
+          className="block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+ */
