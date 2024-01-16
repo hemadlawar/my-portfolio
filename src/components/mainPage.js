@@ -4,6 +4,7 @@ export function MainPage() {
   return (
     <div>
       <NavList />
+      
     </div>
   );
 }

@@ -41,13 +41,13 @@ export default function NavList() {
             href="#"
             className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
           >
-            Features
+            educations
           </a>
           <a
             href="#"
             className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
           >
-            Pricing
+            skills
           </a>
           <a
             href="#"
