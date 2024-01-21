@@ -2,38 +2,38 @@ import React from "react";
 
 export default function MainSection() {
   return (
-    <div className="mt-8 ml-10">
-      {" "}
-      <div className="max-w-sm w-full lg:max-w-full lg:flex">
-        <div
-          className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-          style={{ backgroundImage: "url('/img/card-left.jpg')" }}
-          title="Woman holding a mug"
-        ></div>
-        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div className="mb-8">
-            <p className="text-sm text-gray-600 flex items-center">About Me</p>
-            <div className="text-gray-900 font-bold text-xl mb-2">
-              HEMA DLAWAR
-            </div>
-            <p className="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div className="flex items-center">
-            <img
-              className="w-10 h-10 rounded-full mr-4"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF1IwK6-SxM83UpFVY6WtUZxXx-phss_gAUfdKbkTfau6VWVkt"
-              alt="Avatar of Jonathan Reinink"
-            />
-            <div className="text-sm">
-              <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-              <p className="text-gray-600">Aug 18</p>
-            </div>
-          </div>
+    <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
+          alt="ui/ux review check"
+        />
+      </div>
+      <div className="p-6">
+        <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+          UI/UX Review Check
+        </h4>
+        <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+          Because it&apos;s about motivating the doers. Because I&apos;m here to
+          follow my dreams and inspire others.
+        </p>
+      </div>
+      <div className="flex items-center justify-between p-6">
+        <div className="flex items-center -space-x-3">
+          <img
+            alt="natali craig"
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1061&amp;q=80"
+            className="relative inline-block h-9 w-9 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
+          />
+          <img
+            alt="Tania Andrew"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+            className="relative inline-block h-9 w-9 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
+          />
         </div>
+        <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+          January 10
+        </p>
       </div>
     </div>
   );
