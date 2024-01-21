@@ -32,7 +32,7 @@ export default function MainSection() {
           />
         </div>
         <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-          January 10
+          January 1u9
         </p>
       </div>
     </div>
