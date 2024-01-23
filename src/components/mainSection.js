@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MainSection() {
   return (
-    <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+    <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md ml-8 mt-10">
       <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
         <img
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
@@ -18,7 +18,7 @@ export default function MainSection() {
           follow my dreams and inspire others.
         </p>
       </div>
-      <div className="flex items-center justify-between p-6">
+      <div className="flex items-center justify-between p-6 ">
         <div className="flex items-center -space-x-3">
           <img
             alt="natali craig"
