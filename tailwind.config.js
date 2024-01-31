@@ -7,7 +7,9 @@ module.exports = {
         custom: "32rem", // You can adjust the width value as needed
       },
       height: {
+        lowhigh: "18rem",
         custom: "32rem", // You can adjust the width value as needed
+        veryHigh: "40rem",
       },
     },
   },
