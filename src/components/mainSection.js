@@ -7,14 +7,18 @@ export default function MainSection() {
     <div className="relative flex  flex-col overflow-hidden rounded-xl  bg-clip-border text-sky-600 shadow-md     w-9/12   h-veryHigh   ml-36 mt-24">
       <div className=" flex justify-between">
         <div className="p-6 ">
-          <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            UI/UX Review Check
-          </h4>
-          <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-sky-600 ">
-            hello my name is hema dlawar i'm 22 years old ... regards
+          <h1 className="block font-sans text-5xl md:font-bold  antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            Hello!
+          </h1>
+          <p className="text-3xl mt-4">
+            {" "}
+            welcome to my profile page! <br />
+            I'm Hema Dlawar, a software engineer who loves web development.
+            <br /> I'm good at picking up new things quickly. I enjoy staying
+            updated on the latest trends in web development.
+            <br /> Learning is my thing, and I'm always eager to tackle new
+            topics
           </p>
-        </div>
-        <div>
           <button>my resume</button>
         </div>
 
@@ -28,6 +32,7 @@ export default function MainSection() {
           />
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
