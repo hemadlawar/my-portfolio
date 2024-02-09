@@ -46,14 +46,17 @@ export default function Navigation() {
           <Link to="/" className="text-white">
             Home
           </Link>
-          <Link to="/about" className="text-white">
-            About
+          <Link to="/skills" className="text-white">
+            skills
           </Link>
-          <Link to="/portfolio" className="text-white">
-            Portfolio
+          <Link to="/education" className="text-white">
+            education
+          </Link>
+          <Link to="/projects" className="text-white">
+            projects
           </Link>
           <Link to="/contact" className="text-white">
-            Contact
+            contact
           </Link>
         </div>
       </div>
