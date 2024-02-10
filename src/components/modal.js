@@ -1,14 +1,12 @@
 import React from "react";
 import { useState } from "react";
-export default function Modal() {
-  const [showmodall, setShowmoadall] = useState(true);
-
-  const eventHandling = () => {
-    setShowmoadall(!setShowmoadall);
-  };
+export default function Modal({ showModal, setShowModal }) {
+  function eventHandling() {
+    setShowModal(!showModal);
+  }
   return (
     <div>
-      {showmodall && (
+      {showModal && (
         <>
           (
           <>

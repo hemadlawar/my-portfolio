@@ -42,9 +42,10 @@ export default function MainSection() {
               className="w-full h-full object-cover"
             />
           </div>
+          <div></div>
         </div>
       </div>
-      {showModal && <Modal eventHandling={eventHandling} />}
+      {showModal && <Modal showModal={showModal} setShowModal={setShowModal} />}
     </div>
   );
 }
