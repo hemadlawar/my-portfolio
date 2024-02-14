@@ -9,20 +9,20 @@ export default function Navigation() {
         <p className="text-white text-xl font-bold">Hema Dlawar</p>
 
         {/* Navigation links */}
-        <div className="hidden md:flex space-x-4">
-          <Link to="/" className="text-white">
+        <div className="hidden md:flex space-x-4 ">
+          <Link to="/" className="text-white hover:bg-blue-600">
             Home
           </Link>
-          <Link to="/skills" className="text-white">
+          <Link to="/skills" className="text-white hover:bg-blue-600">
             skills
           </Link>
-          <Link to="/education" className="text-white">
+          <Link to="/education" className="text-white hover:bg-blue-600">
             education
           </Link>
-          <Link to="/projects" className="text-white">
+          <Link to="/projects" className="text-white hover:bg-blue-600">
             projects
           </Link>
-          <Link to="/contact" className="text-white">
+          <Link to="/contact" className="text-white hover:bg-blue-600">
             contact
           </Link>
         </div>
